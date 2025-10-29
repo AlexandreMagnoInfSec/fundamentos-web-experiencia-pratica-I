@@ -1,0 +1,264 @@
+(estrutura)
+ong-plataforma/
+├── index.html
+├── projetos.html
+├── cadastro.html
+├── css/
+│ └── style.css
+├── js/
+│ └── main.js
+├── images/
+│ ├── logo.png
+│ └── placeholder-01.jpg
+└── README.md
+
+1) index.html (Página inicial - semântica e acessibilidade)
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ONG Exemplo — Missão e Projetos</title>
+<meta name="description" content="ONG Exemplo: missão, visão, projetos sociais e como ajudar.">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Ir para o conteúdo</a>
+<header class="site-header" role="banner">
+<div class="container">
+<img src="images/logo.png" alt="Logotipo da ONG Exemplo" class="logo">
+<nav role="navigation" aria-label="Menu principal">
+<ul class="main-nav">
+<li><a href="index.html">Início</a></li>
+<li><a href="projetos.html">Projetos</a></li>
+<li><a href="cadastro.html">Cadastre-se</a></li>
+</ul>
+</nav>
+</div>
+</header>
+
+
+<main id="main" class="container" role="main">
+<section aria-labelledby="sobre-title" class="hero">
+<h1 id="sobre-title">ONG Exemplo — Transformando Vidas</h1>
+<p class="lead">Nossa missão é gerar impacto social por meio de ações educativas, saúde e inclusão.</p>
+<p><a class="btn" href="projetos.html">Conheça nossos projetos</a></p>
+</section>
+
+
+<section aria-labelledby="missao-title" class="institutional">
+<h2 id="missao-title">Missão, Visão e Valores</h2>
+<article>
+<h3>Missão</h3>
+<p>Contribuir para o desenvolvimento local apoiando crianças, jovens e famílias.</p>
+</article>
+<article>
+<h3>Visão</h3>
+<p>Ser referência em projetos comunitários e transparência.</p>
+</article>
+<article>
+<h3>Valores</h3>
+<ul>
+<li>Transparência</li>
+<li>Inclusão</li>
+<li>Respeito</li>
+</ul>
+</article>
+</section>
+
+
+<section aria-labelledby="contato-title" class="contact">
+<h2 id="contato-title">Contato</h2>
+<address>
+<p>Rua Exemplo, 123 — Pindamonhangaba, SP</p>
+<p>Telefone: <a href="tel:+5512999999999">(12) 99999-9999</a></p>
+<p>Email: <a href="mailto:contato@ongexemplo.org">contato@ongexemplo.org</a></p>
+</address>
+</section>
+</main>
+
+
+</html>
+
+2) projetos.html (listagem de projetos, galeria e chamadas para doação/voluntariado)
+
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Projetos — ONG Exemplo</title>
+<meta name="description" content="Projetos sociais da ONG Exemplo, como voluntariar e como doar.">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip-link" href="#main">Ir para o conteúdo</a>
+<header class="site-header" role="banner">
+<div class="container">
+<img src="images/logo.png" alt="Logotipo da ONG Exemplo" class="logo">
+<nav role="navigation" aria-label="Menu principal">
+<ul class="main-nav">
+<li><a href="index.html">Início</a></li>
+<li><a href="projetos.html">Projetos</a></li>
+<li><a href="cadastro.html">Cadastre-se</a></li>
+</ul>
+</nav>
+</div>
+</header>
+
+
+<main id="main" class="container" role="main">
+<h1>Projetos Sociais</h1>
+<p>Conheça alguns projetos em andamento e como participar.</p>
+
+
+<section aria-labelledby="lista-projetos" class="projects-list">
+<h2 id="lista-projetos">Nossos Projetos</h2>
+
+
+<article class="project" aria-labelledby="proj-1-title">
+<h3 id="proj-1-title">Projeto Educação</h3>
+<p>Atividades de reforço escolar para crianças de 6 a 14 anos.</p>
+<img src="images/placeholder-01.jpg" alt="Crianças em atividades educativas" width="600" height="400">
+<p>
+<a href="#" class="btn">Quero ser voluntário</a>
+<a href="#" class="btn-secondary">Doar para este projeto</a>
+</p>
+</article>
+
+
+<article class="project" aria-labelledby="proj-2-title">
+<h3 id="proj-2-title">Projeto Saúde</h3>
+<p>Atendimentos básicos e campanhas de vacinação.</p>
+</article>
+
+
+</section>
+
+
+<aside aria-labelledby="cta-title" class="cta">
+<h2 id="cta-title">Apoie nossa causa</h2>
+<p>Ajude com doações, trabalho voluntário ou compartilhando nossos projetos.</p>
+<p><a class="btn" href="cadastro.html">Cadastre-se</a></p>
+</aside>
+</main>
+
+
+<footer class="site-footer" role="contentinfo">
+<div class="container">
+<p>&copy; <time datetime="2025">2025</time> ONG Exemplo.</p>
+</div>
+</footer>
+
+
+<script src="js/main.js" defer></script>
+</body>
+</html>
+
+3) cadastro.html (Formulário complexo: validação nativa, grupos, máscaras)
+
+<!doctype html>
+<fieldset>
+<legend>Dados pessoais</legend>
+
+
+<label for="nome">Nome completo</label>
+<input id="nome" name="nome" type="text" required minlength="3" aria-required="true">
+
+
+<label for="email">E‑mail</label>
+<input id="email" name="email" type="email" required aria-required="true">
+
+
+<label for="cpf">CPF</label>
+<input id="cpf" name="cpf" type="text" inputmode="numeric" pattern="\d{3}\.\d{3}\.\d{3}-\d{2}" placeholder="000.000.000-00" required>
+
+
+<label for="telefone">Telefone</label>
+<input id="telefone" name="telefone" type="tel" inputmode="tel" placeholder="(00) 00000-0000" required>
+
+
+<label for="data-nasc">Data de nascimento</label>
+<input id="data-nasc" name="data_nasc" type="date" required>
+</fieldset>
+
+
+<fieldset>
+<legend>Endereço</legend>
+<label for="cep">CEP</label>
+<input id="cep" name="cep" type="text" pattern="\d{5}-?\d{3}" placeholder="00000-000" required>
+
+
+<label for="endereco">Endereço</label>
+<input id="endereco" name="endereco" type="text" required>
+
+
+<label for="cidade">Cidade</label>
+<input id="cidade" name="cidade" type="text" required>
+
+
+<label for="estado">Estado</label>
+<select id="estado" name="estado" required>
+<option value="">Selecione</option>
+<option value="SP">SP</option>
+<option value="RJ">RJ</option>
+<option value="MG">MG</option>
+<!-- completar com demais estados -->
+</select>
+</fieldset>
+
+
+<fieldset>
+<legend>Interesses</legend>
+<label><input type="checkbox" name="interesse" value="voluntariado"> Voluntariado</label>
+<label><input type="checkbox" name="interesse" value="doacao"> Doação</label>
+<label><input type="checkbox" name="interesse" value="newsletter"> Receber newsletter</label>
+</fieldset>
+
+
+<p>
+<button type="submit" class="btn">Enviar cadastro</button>
+<button type="reset" class="btn-secondary">Limpar</button>
+</p>
+</form>
+</main>
+
+
+<footer class="site-footer" role="contentinfo">
+<div class="container">
+<p>&copy; <time datetime="2025">2025</time> ONG Exemplo.</p>
+</div>
+</footer>
+
+
+<script src="js/main.js" defer></script>
+</body>
+</html>
+
+4) css/style.css (mobile-first, responsivo, acessível)
+
+:root{
+--max-width:1100px;
+--gap:1rem;
+--brand:#0b6fa4;
+--muted:#666;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{font-family:system-ui,-apple-system,Segoe UI,Roboto,'Helvetica Neue',Arial;line-height:1.4;margin:0;color:#222}
+.container{max-width:var(--max-width);margin:0 auto;padding:1rem}
+.skip-link{position:absolute;left:-999px;top:auto;width:1px;height:1px;overflow:hidden}
+.skip-link:focus{left:1rem;top:1rem;width:auto;height:auto;background:#fff;padding:0.25rem;border:2px solid #000}
+.site-header{background:#f8f9fb;padding:0.75rem 0;border-bottom:1px solid #e6e6e6}
+.logo{height:48px}
+.main-nav{display:flex;gap:1rem;list-style:none;padding:0;margin:0}
+.main-nav a{text-decoration:none}
+.hero{padding:1rem 0}
+.lead{color:var(--muted)}
+.btn{display:inline-block;padding:0.5rem 0.75rem;border-radius:6px;background:var(--brand);color:#fff;text-decoration:none}
+.btn-secondary{display:inline-block;padding:0.5rem 0.75rem;border-radius:6px;background:transparent;border:1px solid #ccc}
+.projects-list{display:grid;gap:1rem}
+.project img{max-width:100%;height:auto}
+fieldset{border:1px solid #ddd;padding:1rem;margin-bottom:1rem}
+label{display:block;margin-top:0.5rem}
+input[type=text],input[type=email],input[type=tel],select,input[type=date]{width:100%;padding:0.5rem;bor
