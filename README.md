@@ -27,7 +27,7 @@ Paleta de cores harmoniosa e acessível
 🚀 Como visualizar
 
 Acesse o site publicado:
-👉 https://alexandremagno.github.io/fundamentos-web-experiencia-pratica-I
+👉 https://github.com/AlexandreMagnoInfSec/fundamentos-web-experiencia-pratica-I
 
 (Depois que subirmos o GitHub Pages, esse link ficará ativo.)
 
