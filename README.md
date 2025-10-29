@@ -4,8 +4,8 @@ Projeto desenvolvido para a disciplina de Fundamentos da Web – Experiência Pr
 🖥️ Fundamentos da Web – Experiência Prática I
 
 Aluno: Alexandre Magno Mattos do Espírito Santo
-Curso: Análise e Desenvolvimento de Sistemas – 1º Semestre
-Instituição: Faculdade (coloque o nome da sua)
+Curso: Análise e Desenvolvimento de Sistemas – 2º Semestre
+Instituição: Faculdade cruzeiro do sul
 Ano: 2025
 
 📚 Descrição do Projeto
